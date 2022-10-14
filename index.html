@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Proyecto Final</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <header class="bg-banking" id="home">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="container-fluid">
+                      <a class="navbar-brand text-black" href="#">Banco DEVF</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+
+                          <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Iniciar Sesion</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Cerrar Sesion</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center pt-5 text-black">DEVF ATM</h1>
+                    <div class="card my-5 p-3">
+                        <div class="card-body">
+                            <form id="form-login">
+                                <div class="row">
+
+                                    <div class="col-12 col-md-3 mb-3 mb-md-0">
+                                        <label for="inputUser">Usuario</label>
+                                        <select id="inputUser" class="form-select">
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-3 mb-3 mb-md-0">
+                                        <label for="inputNip">NIP</label>
+                                        <input type="password" id="inputNip" class="form-control">
+                                    </div>
+                                    <div class="col d-flex align-items-end">
+                                        <button type="sumit" class="btn btn-success w-100">Iniciar Sesion</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="bg-dark text-blue py-5" id="account">
+        <div class="container">
+            <div id="box-ingreso" class="row row-cols-1 row-cols-xl-2">
+                <div class="col mb-3">
+                    <div class="card bg-secondary flex-row rounded-3">
+                        <div class="card-body w-50">
+                            <h5 class="card-title"></h5>
+                            <h2 class="card-text mb-0 text-capitalize">
+                                Hola <span id="name">Usuario</span>
+                                <button type="button" class="btn btn-danger" id="cerrar_sesion">Cerrar Sesión</button>
+                            </h2>
+                            <p class="card-text mb-3 text-capitalize"><span>Bienvenido a DEFV Bank</span>.</p>
+                            <!-- <div id="operaciones"> -->
+                                <p class="card-text mb-3 text-capitalize"><b>Que Operacion deseas efectuar?</b> </p>
+                                <a href="#Consulta de Saldo" class="btn btn-primary" id="consulta">Consulta de Saldo</a> 
+                                <a href="#Deposito" class="btn btn-primary" id="deposito">Deposito</a>
+                                <a href="#Retiro" class="btn btn-primary" id="retiro">Retiro</a>
+                            <!-- </div> -->
+                            <div id="contenido"></div>                        
+                        </div>
+                    </div>       
+                </div>
+ 
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/usuariosdb.js"></script>
+    <script src="./js/atm.js"></script>
+    
+
+</body>
+</html>
